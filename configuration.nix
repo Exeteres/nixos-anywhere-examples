@@ -16,7 +16,10 @@
     efiSupport = true;
     efiInstallAsRemovable = true;
   };
+
   services.openssh.enable = true;
+  services.cloud-init.enable = true;
+  services.cloud-init.network.enable = true;
 
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
